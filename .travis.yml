@@ -1,0 +1,9 @@
+language: java
+jdk:
+  - oraclejdk7
+
+env:
+  TERM: dumb
+
+after_success:
+ - if [[ $TRAVIS_PULL_REQUEST == "false" ]]; then gradle bintrayUpload ; fi
