@@ -14,4 +14,10 @@ public class NextVersionFinderTest {
 
         assertThat(result, is("1.11"));
     }
+    @Test
+    public void nextVersion2() throws Exception {
+        String result = underTest.nextVersion("5.85.0.RELEASE");
+
+        assertThat(result, is("5.85.1.RELEASE"));
+    }
 }
